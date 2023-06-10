@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Poetry Showcase</title>
+    <link rel="stylesheet" href="/css_fills/poem.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/project_images/My project-1.png" alt="Logo">
+            <h1>♛꧁💖💞༒♥꧁ ༒राधे राधे༒꧂♥༒💞💖꧂♛</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/About us.html">About</a></li>
+                <li><a href="/poem.html">Poetry</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/image gallary.html">Image Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Poetry Showcase</h1>
+
+    <div class="poetry-section">
+        <div class="poem">
+            <h2 class="poem-title">A Love Untold</h2>
+            <p class="poem-content">
+                हर शाम हर किसी के लिए सुहानी नहीं होती,
+                हर प्यार के पीछे कोई कहानी नहीं होती,
+                कुछ असर तो होता है दो आत्मा के मेल का
+                वरना गोरी राधा, सांवले कृष्णा की दीवानी न होती.
+            </p>
+        </div>
+
+        <div class="poem">
+            <h2 class="poem-title">Things Untold</h2>
+            <p class="poem-content">
+                बहुत खुबसूरत है मेरे ख्यालो की दुनिया,
+                बस कृष्ण से शुरू और कृष्ण पर ही खत्म !!
+                    राधे-कृष्णा
+            </p>
+        </div>
+
+        <div class="poem-form">
+            <h3 style="color: white;">Add Your Own Poem</h3>
+            <form id="add-poem-form">
+                <label for="poem-title">Title:</label>
+                <input type="text" id="poem-title" name="poem-title" required>
+
+                <label for="poem-content">Content:</label>
+                <textarea id="poem-content" name="poem-content" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const poemForm = document.getElementById("add-poem-form");
+            const poetrySection = document.querySelector(".poetry-section");
+
+            poemForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const title = document.getElementById("poem-title").value;
+                const content = document.getElementById("poem-content").value;
+
+                if (title.trim() !== "" && content.trim() !== "") {
+                    const poemContainer = document.createElement("div");
+                    poemContainer.classList.add("poem");
+
+                    const titleElement = document.createElement("h2");
+                    titleElement.classList.add("poem-title");
+                    titleElement.textContent = title;
+
+                    const contentElement = document.createElement("p");
+                    contentElement.classList.add("poem-content");
+                    contentElement.textContent = content;
+
+                    poemContainer.appendChild(titleElement);
+                    poemContainer.appendChild(contentElement);
+
+                    poetrySection.appendChild(poemContainer);
+
+                    poemForm.reset();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

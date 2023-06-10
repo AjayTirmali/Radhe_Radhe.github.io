@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff6b6b, #bb8fce);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.intro-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-card h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ff6699;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.friends-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.friends-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ff6699;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.friend-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin: 10px;
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.friend-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.photo-card {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    perspective: 800px;
+    cursor: pointer;
+}
+
+.photo-card .photo {
+position: relative;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: transform 0.5s;
+transform: perspective(1000px) rotateY(0deg) translateZ(0);
+}
+
+.photo-card .photo img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+transform: translateZ(0);
+}
+
+.photo-card .overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+transform: perspective(1000px) rotateY(-180deg) translateZ(0);
+transition: transform 0.5s;
+}
+
+.photo-card:hover .photo {
+transform: perspective(1000px) rotateY(180deg) translateZ(50px);
+}
+
+.photo-card:hover .overlay {
+transform: perspective(1000px) rotateY(0deg) translateZ(-50px);
+}
+
+.photo-card .overlay img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

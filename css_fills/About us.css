@@ -1,0 +1,164 @@
+body {
+    background: linear-gradient(to bottom right, #ff6b6b, #bb8fce);
+    color: #fff;
+    font-family: "Arial", sans-serif;
+  }
+
+  header {
+    /*background: linear-gradient(to right, #f9d423, #ff4e50);*/
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logoo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logoo img:hover {
+    transform: rotate(360deg);
+  }
+
+  .logoo h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  nav ul li a {
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  nav ul li a:hover {
+    color: #e2d1f9;
+  }
+
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 48px;
+    text-align: center;
+    padding: 50px 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .logo {
+    display: block;
+    margin: 50px auto;
+    width: 200px;
+    animation: bounce 2s ease infinite;
+    border-radius: 25px;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+
+    40% {
+      transform: translateY(-20px);
+    }
+
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .founder-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .founder-card {
+    text-align: center;
+    margin: 0 30px;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .founder-card img {
+    width: 135px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .founder-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .founder-card h3 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .founder-card p {
+    font-size: 18px;
+    margin-top: 10px;
+    animation: typewriter 4s steps(35) 1s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+    width: 0;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
